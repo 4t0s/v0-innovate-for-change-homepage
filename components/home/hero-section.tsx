@@ -1,50 +1,64 @@
-import { Badge } from "@/components/ui/badge"
+import Image from "next/image"
+import Link from "next/link"
+import { ArrowUpRight } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-foreground text-background">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute -left-20 -top-20 h-96 w-96 rounded-full bg-primary" />
-        <div className="absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-accent" />
-      </div>
+    <section className="relative flex min-h-screen flex-col justify-end overflow-hidden">
+      {/* Background image */}
+      <Image
+        src="/images/hero-bg.jpg"
+        alt=""
+        fill
+        priority
+        className="object-cover"
+        sizes="100vw"
+      />
 
-      <div className="relative mx-auto flex max-w-6xl flex-col items-center px-6 py-24 text-center lg:py-36">
-        <Badge
-          variant="outline"
-          className="mb-8 border-background/20 bg-background/5 text-background/80"
-        >
-          Student Innovation Program
-        </Badge>
+      {/* Dark gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_20%_8%/0.85)] via-[hsl(220_20%_8%/0.4)] to-[hsl(220_20%_8%/0.2)]" />
 
-        <h1 className="max-w-4xl text-balance font-serif text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
-          Innovate for Change
-        </h1>
+      {/* Content */}
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-16 pt-32 md:pb-24">
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-end lg:justify-between">
+          {/* Left: Main headline + CTA */}
+          <div className="max-w-2xl">
+            <h1 className="text-balance leading-[1.05]">
+              <span className="block text-4xl font-semibold text-[hsl(0_0%_100%/0.95)] md:text-5xl lg:text-6xl">
+                Innovate for Change.
+              </span>
+              <span className="mt-1 block font-serif text-4xl italic text-[hsl(0_0%_100%/0.85)] md:text-5xl lg:text-6xl">
+                Impact that lasts.
+              </span>
+            </h1>
 
-        <p className="mt-8 max-w-2xl text-pretty text-base leading-relaxed opacity-70 md:text-lg">
-          Innovate for Change provides students with a platform to design
-          practical solutions that support underprivileged communities. We
-          combine innovation, mentorship, a scientific approach, and
-          entrepreneurship to transform the strongest projects into ventures
-          that continue delivering impact long after the competition ends.
-        </p>
+            <p className="mt-6 max-w-lg text-pretty text-base leading-relaxed text-[hsl(0_0%_100%/0.6)] md:text-lg">
+              A student innovation platform where ideas become real solutions
+              for underprivileged communities — and keep creating impact long
+              after the competition ends.
+            </p>
 
-        {/* Dynamic status notice */}
-        <div className="mt-10 rounded-lg border border-background/10 bg-background/5 px-6 py-4">
-          <p className="text-sm leading-relaxed opacity-80">
-            Applications for the Kazakhstan 2025 round are now closed.
-            <br />
-            The next application cycle will open in 2026 — stay tuned.
-          </p>
-        </div>
+            <Link
+              href="/case-2025"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[hsl(0_0%_100%/0.95)] px-6 py-3 text-sm font-semibold text-[hsl(220_20%_12%)] transition-all hover:bg-[hsl(0_0%_100%/1)] hover:shadow-lg"
+            >
+              Explore Case 2025
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
 
-        <div className="mt-12 max-w-2xl rounded-lg border border-primary/30 bg-primary/10 px-6 py-5">
-          <p className="text-sm leading-relaxed opacity-90">
-            If you are a passionate student who believes innovation should
-            solve real problems on a global scale, Innovate For Change is open
-            to you. Bring empathy-driven, real-world innovation to your
-            community by leading programs and applying to start a branch in
-            your country.
-          </p>
+          {/* Right: Status card */}
+          <div className="max-w-sm rounded-2xl border border-[hsl(0_0%_100%/0.1)] bg-[hsl(220_20%_12%/0.6)] p-6 backdrop-blur-md">
+            <p className="text-sm italic leading-relaxed text-[hsl(0_0%_100%/0.7)]">
+              {'"If you are a passionate student who believes innovation should solve real problems on a global scale, Innovate For Change is open to you."'}
+            </p>
+            <div className="mt-4 flex items-center gap-3">
+              <div className="h-px flex-1 bg-[hsl(0_0%_100%/0.15)]" />
+              <p className="shrink-0 text-xs font-medium text-[hsl(0_0%_100%/0.5)]">
+                Applications for 2025 are closed
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

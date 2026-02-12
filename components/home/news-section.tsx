@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { ArrowRight, Calendar } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
 const newsItems = [
   {
@@ -31,27 +30,28 @@ const newsItems = [
 
 export function NewsSection() {
   return (
-    <section className="bg-secondary py-24">
+    <section className="bg-secondary py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-primary">
               Latest Updates
             </p>
-            <h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl">
+            <h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
               Latest News
             </h2>
-            <p className="mt-3 max-w-xl text-base leading-relaxed text-muted-foreground">
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
               {"Stay informed with the latest updates on Innovate for Change's work around the world."}
             </p>
           </div>
 
-          <Button asChild variant="outline" className="gap-2 shrink-0">
-            <Link href="/news">
-              View all news
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Button>
+          <Link
+            href="/news"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:bg-card"
+          >
+            View all news
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -59,7 +59,7 @@ export function NewsSection() {
             <Link
               key={item.slug}
               href={`/news/${item.slug}`}
-              className="group flex flex-col rounded-lg border border-border bg-card p-6 transition-all hover:shadow-md hover:border-primary/30"
+              className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:shadow-lg hover:border-primary/30"
             >
               <span className="text-xs font-semibold uppercase tracking-wider text-primary">
                 {item.tag}
@@ -70,9 +70,14 @@ export function NewsSection() {
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
                 {item.summary}
               </p>
-              <div className="mt-6 flex items-center gap-2 text-xs text-muted-foreground">
-                <Calendar className="h-3.5 w-3.5" />
-                {item.date}
+              <div className="mt-6 flex items-center justify-between">
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <Calendar className="h-3.5 w-3.5" />
+                  {item.date}
+                </div>
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary text-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </span>
               </div>
             </Link>
           ))}
