@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 const sdgs = [
   {
     number: 3,
@@ -51,12 +49,14 @@ export function SdgSection() {
               key={sdg.number}
               className="group overflow-hidden rounded-xl transition-transform hover:scale-105"
             >
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={`https://open-sdg.github.io/sdg-translations/assets/img/goals/en/${sdg.number}.png`}
                 alt={`SDG ${sdg.number}: ${sdg.title}`}
                 width={200}
                 height={200}
                 className="h-auto w-full"
+                loading="lazy"
               />
             </div>
           ))}
