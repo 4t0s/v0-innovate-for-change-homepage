@@ -1,7 +1,7 @@
 export function CaseIntro() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-24">
-      <p className="text-base leading-relaxed text-muted-foreground">
+    <section className="mx-auto max-w-3xl px-5 py-16 sm:px-6 sm:py-24">
+      <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
         In 2025, we deliberately focused on one of the most overlooked yet
         critically important areas in education: inclusive learning for children
         with disabilities. Our mission was to design educational toys that
@@ -10,7 +10,7 @@ export function CaseIntro() {
         foundational ability for independence, learning confidence, and everyday
         functioning, yet one for which accessible tools remain limited.
       </p>
-      <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+      <p className="mt-5 text-sm leading-relaxed text-muted-foreground sm:mt-6 sm:text-base">
         Rather than just designing, teams closely studied how children interact
         with objects, observed fine motor challenges during play and learning,
         and analyzed real behavioral responses in partner centers. These insights

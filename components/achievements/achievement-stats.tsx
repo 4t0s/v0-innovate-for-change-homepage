@@ -48,26 +48,26 @@ const stats = [
 
 export function AchievementStats() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24">
+    <section className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-24">
       <div className="text-center">
         <p className="text-xs font-semibold uppercase tracking-widest text-primary">
           By The Numbers
         </p>
-        <h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl">
+        <h2 className="mt-4 font-serif text-2xl font-bold text-foreground sm:text-3xl md:text-4xl">
           2025 Program Highlights
         </h2>
       </div>
 
-      <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid gap-4 sm:mt-16 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
         {stats.map((stat) => (
           <div
             key={stat.label}
-            className="flex flex-col items-start rounded-lg border border-border bg-card p-8"
+            className="flex flex-col items-start rounded-lg border border-border bg-card p-5 sm:p-8"
           >
-            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-              <stat.icon className="h-6 w-6 text-primary" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 sm:h-12 sm:w-12">
+              <stat.icon className="h-5 w-5 text-primary sm:h-6 sm:w-6" />
             </div>
-            <p className="mt-6 font-serif text-4xl font-bold text-foreground">
+            <p className="mt-4 font-serif text-3xl font-bold text-foreground sm:mt-6 sm:text-4xl">
               {stat.value}
             </p>
             <p className="mt-2 text-sm font-semibold text-card-foreground">
@@ -81,11 +81,11 @@ export function AchievementStats() {
       </div>
 
       {/* Participant Impact */}
-      <div className="mt-16 rounded-xl border border-primary/20 bg-primary/5 p-8 md:p-12">
-        <h3 className="font-serif text-xl font-bold text-foreground">
+      <div className="mt-10 rounded-xl border border-primary/20 bg-primary/5 p-5 sm:mt-16 sm:p-8 md:p-12">
+        <h3 className="font-serif text-lg font-bold text-foreground sm:text-xl">
           Participant Impact
         </h3>
-        <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:mt-4 sm:text-base">
           Participants gained practical experience in designing for inclusivity,
           working with real users, and implementing solutions that matter.
           Children benefited from tools designed to support learning, play, and

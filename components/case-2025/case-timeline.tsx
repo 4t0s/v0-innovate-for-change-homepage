@@ -27,7 +27,7 @@ const stages = [
     purpose:
       "This stage focused on full immersion into problem-solving, human-centered design, and collaborative innovation.",
     details: [
-      "3-day in-person intensive held August 1–3 at Spectrum International School",
+      "3-day in-person intensive held August 1-3 at Spectrum International School",
       "Lectures by invited experts across education, design, and entrepreneurship",
       "Interactive workshops and team-based activities under close mentorship",
       "Early-stage prototypes developed focusing on usability, safety, and accessibility",
@@ -68,48 +68,48 @@ const stages = [
 
 export function CaseTimeline() {
   return (
-    <section className="bg-secondary py-24">
-      <div className="mx-auto max-w-6xl px-6">
+    <section className="bg-secondary py-16 sm:py-24">
+      <div className="mx-auto max-w-6xl px-5 sm:px-6">
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-primary">
             The Process
           </p>
-          <h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
+          <h2 className="mt-4 font-serif text-2xl font-bold text-foreground sm:text-3xl md:text-4xl text-balance">
             Four Stages of Innovation
           </h2>
         </div>
 
-        <div className="mt-16 flex flex-col gap-12">
-          {stages.map((stage, idx) => (
+        <div className="mt-10 flex flex-col gap-8 sm:mt-16 sm:gap-12">
+          {stages.map((stage) => (
             <div
               key={stage.number}
-              className="grid gap-8 lg:grid-cols-12 lg:items-start"
+              className="flex flex-col gap-5 lg:flex-row lg:items-start lg:gap-8"
             >
               {/* Number + icon */}
-              <div className="flex items-center gap-4 lg:col-span-3">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary">
-                  <stage.icon className="h-6 w-6 text-primary-foreground" />
+              <div className="flex items-center gap-4 lg:w-64 lg:shrink-0">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary sm:h-14 sm:w-14">
+                  <stage.icon className="h-5 w-5 text-primary-foreground sm:h-6 sm:w-6" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-xs font-bold text-muted-foreground">
                     {"Stage " + stage.number}
                   </p>
-                  <p className="text-lg font-bold text-foreground">
+                  <p className="text-base font-bold text-foreground sm:text-lg">
                     {stage.title}
                   </p>
                 </div>
               </div>
 
               {/* Content */}
-              <div className="rounded-lg border border-border bg-card p-8 lg:col-span-9">
+              <div className="min-w-0 flex-1 rounded-lg border border-border bg-card p-5 sm:p-8">
                 <p className="text-sm font-semibold uppercase tracking-wider text-primary">
                   Purpose
                 </p>
-                <p className="mt-2 text-base leading-relaxed text-muted-foreground">
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
                   {stage.purpose}
                 </p>
 
-                <p className="mt-6 text-sm font-semibold uppercase tracking-wider text-primary">
+                <p className="mt-5 text-sm font-semibold uppercase tracking-wider text-primary sm:mt-6">
                   Key Details
                 </p>
                 <ul className="mt-2 flex flex-col gap-2">
@@ -124,7 +124,7 @@ export function CaseTimeline() {
                   ))}
                 </ul>
 
-                <div className="mt-6 rounded-lg bg-primary/5 p-4">
+                <div className="mt-5 rounded-lg bg-primary/5 p-3 sm:mt-6 sm:p-4">
                   <p className="text-sm font-semibold text-primary">Outcome</p>
                   <p className="mt-1 text-sm leading-relaxed text-foreground">
                     {stage.outcome}

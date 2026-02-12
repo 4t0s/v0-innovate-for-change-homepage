@@ -40,11 +40,11 @@ export default async function NewsDetailPage({
     <>
       {/* Hero */}
       <section className="bg-foreground text-background">
-        <div className="mx-auto max-w-6xl px-6 py-20">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-20">
           <Button
             asChild
             variant="ghost"
-            className="mb-8 gap-2 text-background/60 hover:text-background hover:bg-background/10"
+            className="mb-6 gap-2 text-background/60 hover:text-background hover:bg-background/10 sm:mb-8"
           >
             <Link href="/news">
               <ArrowLeft className="h-4 w-4" />
@@ -59,11 +59,11 @@ export default async function NewsDetailPage({
             {article.tag}
           </Badge>
 
-          <h1 className="max-w-3xl font-serif text-3xl font-bold md:text-5xl text-balance">
+          <h1 className="max-w-3xl font-serif text-2xl font-bold sm:text-3xl md:text-5xl text-balance">
             {article.title}
           </h1>
 
-          <div className="mt-6 flex items-center gap-2 text-sm opacity-60">
+          <div className="mt-4 flex items-center gap-2 text-sm opacity-60 sm:mt-6">
             <Calendar className="h-4 w-4" />
             {article.date}
           </div>
@@ -71,19 +71,19 @@ export default async function NewsDetailPage({
       </section>
 
       {/* Content */}
-      <article className="mx-auto max-w-3xl px-6 py-20">
-        <div className="flex flex-col gap-6">
+      <article className="mx-auto max-w-3xl px-5 py-12 sm:px-6 sm:py-20">
+        <div className="flex flex-col gap-5 sm:gap-6">
           {article.content.map((paragraph, i) => (
             <p
               key={i}
-              className="text-base leading-relaxed text-muted-foreground"
+              className="text-sm leading-relaxed text-muted-foreground sm:text-base"
             >
               {paragraph}
             </p>
           ))}
         </div>
 
-        <div className="mt-16 border-t border-border pt-8">
+        <div className="mt-10 border-t border-border pt-6 sm:mt-16 sm:pt-8">
           <Button asChild variant="outline" className="gap-2">
             <Link href="/news">
               <ArrowLeft className="h-4 w-4" />

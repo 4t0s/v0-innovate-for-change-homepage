@@ -3,8 +3,8 @@ import Link from "next/link"
 export function Footer() {
   return (
     <footer className="bg-foreground text-[hsl(0_0%_100%/0.8)]">
-      <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
-        <div className="grid gap-12 md:grid-cols-3">
+      <div className="mx-auto max-w-6xl px-5 py-12 sm:px-6 sm:py-16 md:py-20">
+        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 md:gap-12">
           {/* Brand */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2.5">
@@ -51,18 +51,18 @@ export function Footer() {
           </div>
 
           {/* Get Involved */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 sm:col-span-2 md:col-span-1">
             <h3 className="text-xs font-semibold uppercase tracking-widest text-[hsl(0_0%_100%/0.35)]">
               Get Involved
             </h3>
-            <p className="text-sm leading-relaxed text-[hsl(0_0%_100%/0.5)]">
+            <p className="max-w-sm text-sm leading-relaxed text-[hsl(0_0%_100%/0.5)]">
               If you are a passionate student who believes innovation should
               solve real problems, Innovate For Change is open to you.
             </p>
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-[hsl(0_0%_100%/0.1)] pt-8 md:flex-row">
+        <div className="mt-10 flex flex-col items-center gap-3 border-t border-[hsl(0_0%_100%/0.1)] pt-8 text-center sm:mt-16 sm:flex-row sm:justify-between sm:text-left">
           <p className="text-xs text-[hsl(0_0%_100%/0.35)]">
             {"© 2025 Innovate for Change. All rights reserved."}
           </p>

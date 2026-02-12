@@ -23,15 +23,15 @@ const impacts = [
 
 export function OverallImpact() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24">
+    <section className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-24">
       <div className="text-center">
         <p className="text-xs font-semibold uppercase tracking-widest text-primary">
           The Bigger Picture
         </p>
-        <h2 className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl text-balance">
+        <h2 className="mt-4 font-serif text-2xl font-bold text-foreground sm:text-3xl md:text-4xl text-balance">
           A Model for Sustainable Impact
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground text-pretty">
+        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base text-pretty">
           Through both program achievements and active engagement in
           professional forums, the 2025 Innovate For Change initiative
           positioned itself as a model for inclusive education, youth leadership,
@@ -39,19 +39,19 @@ export function OverallImpact() {
         </p>
       </div>
 
-      <div className="mt-16 grid gap-8 md:grid-cols-3">
+      <div className="mt-10 grid gap-5 sm:mt-16 sm:gap-8 md:grid-cols-3">
         {impacts.map((item) => (
           <div
             key={item.title}
-            className="flex flex-col items-center rounded-xl border border-border bg-card p-8 text-center"
+            className="flex flex-col items-center rounded-xl border border-border bg-card p-6 text-center sm:p-8"
           >
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary">
-              <item.icon className="h-7 w-7 text-primary-foreground" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary sm:h-14 sm:w-14">
+              <item.icon className="h-6 w-6 text-primary-foreground sm:h-7 sm:w-7" />
             </div>
-            <h3 className="mt-6 text-lg font-bold text-card-foreground">
+            <h3 className="mt-5 text-base font-bold text-card-foreground sm:mt-6 sm:text-lg">
               {item.title}
             </h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:mt-3">
               {item.description}
             </p>
           </div>
