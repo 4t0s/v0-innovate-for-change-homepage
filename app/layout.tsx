@@ -1,5 +1,11 @@
 import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
+import { Montserrat } from "next/font/google"
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+})
 
 import './globals.css'
 import { Navbar } from '@/components/navbar'
@@ -21,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="font-sans antialiased">
+      <body className={`${montserrat.variable} font-sans`}>
         <Navbar />
         <main>{children}</main>
         <Footer />
