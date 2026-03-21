@@ -10,9 +10,9 @@ import {
 const stats = [
   {
     icon: Puzzle,
-    value: "10",
-    label: "Educational toys created & donated",
-    description: "Now actively used by 100+ children daily",
+    value: "150+",
+    label: "Children use them daily now",
+    description: "10 Educational toys created & donated",
   },
   {
     icon: Eye,
