@@ -12,7 +12,7 @@ const stats = [
     icon: Puzzle,
     value: "150+",
     label: "Children use them daily now",
-    description: "10 Educational toys created & donated",
+    description: "10 Educational toys created & donated personally by the students",
   },
   {
     icon: Eye,
