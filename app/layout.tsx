@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className={`${montserrat.variable} font-sans`}>
+      <body className={`${montserrat.variable} font-serif`}>
         <Navbar />
         <main>{children}</main>
         <Footer />
