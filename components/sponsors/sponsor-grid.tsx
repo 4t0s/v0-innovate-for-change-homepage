@@ -78,30 +78,27 @@ const sponsors: Sponsor[] = [
 
 function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:shadow-xl">
-      {/* Photo */}
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted">
+    <div className="group flex flex-col items-center rounded-2xl border border-border bg-card p-6 text-center transition-all hover:shadow-xl sm:p-8">
+      {/* Circular Photo */}
+      <div className="relative h-28 w-28 overflow-hidden rounded-full border-4 border-primary/20 shadow-lg transition-transform duration-300 group-hover:scale-105 sm:h-32 sm:w-32">
         <Image
           src={sponsor.photo}
           alt={sponsor.name}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover"
+          sizes="128px"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-        <div className="absolute bottom-4 left-4 right-4">
-          <p className="text-xs font-medium uppercase tracking-wider text-primary">
-            {sponsor.role}
-          </p>
-          <h3 className="mt-1 text-lg font-semibold text-white sm:text-xl">
-            {sponsor.name}
-          </h3>
-        </div>
       </div>
 
       {/* Content */}
-      <div className="flex flex-1 flex-col gap-4 p-5 sm:p-6">
-        <p className="text-sm leading-relaxed text-muted-foreground">
+      <div className="mt-5 flex flex-1 flex-col">
+        <p className="text-xs font-semibold uppercase tracking-wider text-primary">
+          {sponsor.role}
+        </p>
+        <h3 className="mt-2 text-lg font-semibold text-foreground sm:text-xl">
+          {sponsor.name}
+        </h3>
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
           {sponsor.description}
         </p>
 
@@ -111,7 +108,7 @@ function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
             href={sponsor.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-auto inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors hover:underline"
+            className="mt-4 inline-flex items-center justify-center gap-1.5 text-sm font-medium text-primary transition-colors hover:underline"
           >
             Visit website
             <ExternalLink className="h-3.5 w-3.5" />
@@ -131,8 +128,8 @@ export function SponsorGrid() {
             Our Sponsors
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground sm:text-base">
-            Organizations and individuals who make our mission possible through
-            their generous support and partnership.
+            People and organizations who make our mission possible through their
+            generous support and partnership.
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

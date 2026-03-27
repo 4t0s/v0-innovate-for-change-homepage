@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/achievements", label: "Achievements" },
   { href: "/sponsors", label: "Partners" },
   { href: "/news", label: "News" },
+  { href: "/contact", label: "Contact" },
 ]
 
 export function Navbar() {
