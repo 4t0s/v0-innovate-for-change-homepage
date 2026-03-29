@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { Instagram } from "lucide-react"
 import { peopleCategories, Person } from "@/lib/people-data"
 
@@ -9,12 +8,11 @@ function PersonCard({ person }: { person: Person }) {
     <div className="group flex flex-col items-center rounded-2xl border border-border bg-card p-6 text-center transition-all hover:shadow-xl sm:p-8">
       {/* Circular Photo */}
       <div className="relative h-28 w-28 overflow-hidden rounded-full border-4 border-primary/20 shadow-lg transition-transform duration-300 group-hover:scale-105 sm:h-32 sm:w-32">
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={person.image}
           alt={person.name}
-          fill
-          className="object-cover"
-          sizes="128px"
+          className="h-full w-full object-cover"
         />
       </div>
 
