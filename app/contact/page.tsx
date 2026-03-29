@@ -43,10 +43,10 @@ export default function ContactPage() {
                 For general inquiries and partnership opportunities.
               </p>
               <a
-                href="mailto:contact@innovateforchange.org"
+                href="mailto:innovate4change.kz@gmail.com"
                 className="mt-4 text-sm font-medium text-primary hover:underline"
               >
-                contact@innovateforchange.org
+                innovate4change.kz@gmail.com
               </a>
             </div>
 
@@ -79,113 +79,22 @@ export default function ContactPage() {
               </p>
               <div className="mt-4 flex items-center gap-4">
                 <a
-                  href="https://instagram.com/innovateforchange"
+                  href="https://instagram.com/innovate4change"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-medium text-primary hover:underline"
                 >
                   Instagram
-                </a>
-                <a
-                  href="https://linkedin.com/company/innovateforchange"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium text-primary hover:underline"
-                >
-                  LinkedIn
-                </a>
+                </a>z
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="mt-12 rounded-2xl border border-border bg-card p-6 sm:p-10">
-            <h2 className="text-center text-xl font-semibold text-foreground sm:text-2xl">
-              Send Us a Message
-            </h2>
-            <p className="mx-auto mt-2 max-w-md text-center text-sm text-muted-foreground">
-              Have a question or want to start a conversation? Fill out the form
-              below and we&apos;ll get back to you.
-            </p>
+          
 
-            <form className="mx-auto mt-8 max-w-xl space-y-5">
-              <div className="grid gap-5 sm:grid-cols-2">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="mb-1.5 block text-sm font-medium text-foreground"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Your name"
-                    className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="mb-1.5 block text-sm font-medium text-foreground"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="you@example.com"
-                    className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="subject"
-                  className="mb-1.5 block text-sm font-medium text-foreground"
-                >
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  placeholder="What is this about?"
-                  className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                  required
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="mb-1.5 block text-sm font-medium text-foreground"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  placeholder="Your message..."
-                  className="w-full resize-none rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                  required
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 sm:w-auto"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
+            
+          
         </div>
       </section>
     </>
