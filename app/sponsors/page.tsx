@@ -1,19 +1,19 @@
 import { Metadata } from "next"
-import { SponsorsHero } from "@/components/sponsors/sponsors-hero"
-import { SponsorGrid } from "@/components/sponsors/sponsor-grid"
+import { PeopleHero } from "@/components/sponsors/sponsors-hero"
+import { PeopleGrid } from "@/components/sponsors/sponsor-grid"
 import { PartnerCTA } from "@/components/sponsors/partner-cta"
 
 export const metadata: Metadata = {
-  title: "Our Partners & Sponsors | Innovate for Change",
+  title: "Our Community | Innovate for Change",
   description:
-    "Meet the organizations and partners who make Innovate for Change possible through their generous support and collaboration.",
+    "Meet the speakers, mentors, judges, partners, sponsors, and guests who make Innovate for Change possible.",
 }
 
-export default function SponsorsPage() {
+export default function PeoplePage() {
   return (
     <>
-      <SponsorsHero />
-      <SponsorGrid />
+      <PeopleHero />
+      <PeopleGrid />
       <PartnerCTA />
     </>
   )
