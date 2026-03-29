@@ -219,19 +219,6 @@ export const peopleCategories: PeopleCategory[] = [
     description: "Organizations collaborating with us to expand our reach and impact.",
     people: [
       {
-        id: 5,
-        name: "Partner Representative",
-        image: "/images/people/partner-1.jpg",
-        description: "Strategic partner supporting our mission to create inclusive educational opportunities for all children.",
-      },
-    ],
-  },
-  {
-    id: "sponsors",
-    title: "Sponsors",
-    description: "Generous supporters who make our programs possible.",
-    people: [
-      {
         id: 1,
         name: "Spectrum School",
         description: "Leading international school committed to fostering inclusive education and empowering students to reach their full potential.",
@@ -244,6 +231,27 @@ export const peopleCategories: PeopleCategory[] = [
         description: "Innovative technology company specializing in AI solutions to enhance educational experiences and accessibility for all learners.",
         image: "https://storage.yandexcloud.kz/ifc-media/partners/balamai.jpg",
         url: "https://www.instagram.com/balam_ai/",
+      },
+    ],
+  },
+  {
+    id: "sponsors",
+    title: "Sponsors",
+    description: "Generous supporters who make our programs possible.",
+    people: [
+      {
+      id: 1,
+      name: "Impact",
+      description: "Leading educational institution providing comprehensive support and resources for students to achieve their academic and personal goals.",
+      image: "https://storage.yandexcloud.kz/ifc-media/sponsors/impact.png",
+      url: "https://admissions.kz/",
+      },
+      {
+      id: 2,
+      name: "A group development",
+      description: "Prominent real estate development company dedicated to creating innovative and sustainable living spaces that enhance the quality of life for communities.",
+      image: "https://storage.yandexcloud.kz/ifc-media/sponsors/a-group-development.png",
+      url: "https://www.instagram.com/a_group_development/",
       },
     ],
   },
