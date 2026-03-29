@@ -19,15 +19,14 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4">
       <nav className="flex w-full max-w-5xl items-center justify-between rounded-full border border-[hsl(0_0%_100%/0.1)] bg-[hsl(220_20%_12%/0.7)] px-4 py-2.5 backdrop-blur-xl sm:px-6">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
-            IFC
-          </span>
-          <span className="hidden text-sm font-medium text-[hsl(0_0%_100%/0.9)] sm:inline">
-            Innovate for Change
-          </span>
-        </Link>
+       {/* Logo */}
+      <Link href="/" className="flex items-center gap-2.5">
+        <img
+          src="/logo.png"
+          alt="IFC Logo"
+          className="h-8 w-auto"
+        />
+      </Link>
 
         {/* Desktop nav */}
         <ul className="hidden items-center gap-6 md:flex lg:gap-8">
