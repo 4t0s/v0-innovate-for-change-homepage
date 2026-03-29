@@ -85,7 +85,7 @@ export default function ContactPage() {
                   className="text-sm font-medium text-primary hover:underline"
                 >
                   Instagram
-                </a>z
+                </a>
               </div>
             </div>
           </div>
